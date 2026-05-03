@@ -4,7 +4,7 @@ import Valkey
 import FlorShopDTOs
 
 public struct StreamListener {
-    let streamName: String
+    let streamName: ValkeyStream
     let groupName: String
     let consumerName: String
     
@@ -13,7 +13,7 @@ public struct StreamListener {
         groupName: String,
         consumerName: String
     ) {
-        self.streamName = streamName.rawValue
+        self.streamName = streamName
         self.groupName = groupName
         self.consumerName = consumerName
     }
@@ -24,7 +24,7 @@ public struct StreamListener {
         // 1. Crear grupo
         do {
             try await app.valkey.xgroupCreate(
-                ValkeyKey(self.streamName),
+                ValkeyKey(self.streamName.rawValue),
                 group: self.groupName,
                 idSelector: .id("0"),
                 mkstream: true
@@ -57,7 +57,7 @@ public struct StreamListener {
                 groupBlock: .init(group: groupName, consumer: consumerName),
                 milliseconds: 5000,
                 streams: .init(
-                    keys: [ValkeyKey(streamName)],
+                    keys: [ValkeyKey(streamName.rawValue)],
                     ids: [">" as String]
                 )
             )
@@ -74,7 +74,7 @@ public struct StreamListener {
                     
                     if shouldAck {
                         _ = try await app.valkey.xack(
-                            ValkeyKey(streamName),
+                            ValkeyKey(streamName.rawValue),
                             group: groupName,
                             ids: [messageId]
                         )
