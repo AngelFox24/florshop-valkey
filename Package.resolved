@@ -1,5 +1,5 @@
 {
-  "originHash" : "3ac54a710624e35b8654f172f9296e0baf80a8e582c9f6899364f070517a1bef",
+  "originHash" : "9eb7c2fdcf1f3f5afe05d3a934e1af2282373c85d1f8114f274c59143d2130e1",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AngelFox24/florshop-dtos.git",
       "state" : {
-        "branch" : "feature/add-valkey",
-        "revision" : "713e4435669c40f1311fa0cff5dd0b847992acec"
+        "revision" : "713e4435669c40f1311fa0cff5dd0b847992acec",
+        "version" : "1.0.28"
       }
     },
     {

@@ -23,9 +23,9 @@ let package = Package(
         // 🔵 Valkey Vapor
         .package(url: "https://github.com/vapor-community/valkey.git", from: "1.2.0"),
         // 🔵 Shared DTOs
-//        .package(url: "https://github.com/AngelFox24/florshop-dtos.git", exact: "1.0.27")
+        .package(url: "https://github.com/AngelFox24/florshop-dtos.git", exact: "1.0.28"),
 //            .package(path: "../florshop-dtos")
-            .package(url: "https://github.com/AngelFox24/florshop-dtos.git", branch: "feature/add-valkey")
+//            .package(url: "https://github.com/AngelFox24/florshop-dtos.git", branch: "feature/add-valkey")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
