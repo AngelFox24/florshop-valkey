@@ -23,7 +23,7 @@ let package = Package(
         // 🔵 Valkey Vapor
         .package(url: "https://github.com/vapor-community/valkey.git", from: "1.2.0"),
         // 🔵 Shared DTOs
-        .package(url: "https://github.com/AngelFox24/florshop-dtos.git", exact: "1.0.28"),
+        .package(url: "https://github.com/AngelFox24/florshop-dtos.git", exact: "1.0.29"),
 //            .package(path: "../florshop-dtos")
 //            .package(url: "https://github.com/AngelFox24/florshop-dtos.git", branch: "feature/add-valkey")
     ],
